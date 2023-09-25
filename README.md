@@ -1,7 +1,5 @@
 <h1 align="center"> Hikari ken </h1>
 
-Installation and Configuration of Tools and Themes in Linux
-
 >**Note**: This project is still in development.
 
 <p align="center">
