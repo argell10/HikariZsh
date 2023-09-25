@@ -1,4 +1,4 @@
-<h1 align="center" style="font-size: 50px; background: linear-gradient(to right, #006eff, #00ffff, #00ff08); -webkit-background-clip: text;color: transparent;"> Hikari ken </h1>
+<h1 align="center"> Hikari ken </h1>
 
 Installation and Configuration of Tools and Themes in Linux
 
@@ -25,11 +25,11 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - [lsd](https://github.com/lsd-rs/lsd)
 - [Oh my tmux](https://github.com/gpakosz/.tmux)
 
-<h1 align="center" style="font-size: 36px; background: linear-gradient(to right, #40e7fd, #0edf15); -webkit-background-clip: text;color: transparent;">New Terminal with Zsh · p10k</h1>
+<h1 align="center">New Terminal with Zsh · p10k</h1>
 
 <div align="center">
     <a href="#--------">
-        <img src=".github/assets/ter_01.png" alt="Terminal Preview" width="290px" style=" box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); border-radius: 10px">
+        <img src=".github/assets/ter_01.png" alt="Terminal Preview" width="290px">
     </a>
     <a href="#--------">
         <img src=".github/assets/ter_02.png" alt="Terminal Preview" width="290px" style="padding: 20 10px">
