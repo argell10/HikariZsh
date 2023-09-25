@@ -39,3 +39,15 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
         <img src=".github/assets/ter_03.png" alt="Terminal Preview" width="310px" style="padding: 0 0px ">
     </a>
 </div>
+
+## Installation
+
+1. User as root (sudo)
+```bash
+$ sudo su
+```
+
+2. Run the next command to install
+```bash
+$ git clone https://github.com/argell10/hikari-ken.git --depth=1 && cd hikari-ken && ./install.sh
+```
