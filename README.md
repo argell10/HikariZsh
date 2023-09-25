@@ -1,5 +1,20 @@
 <h1 align="center"> Hikari </h1>
 
+<div align="center">
+    <a href="#--------">
+        <img src=".github/assets/ter_01.png" alt="Terminal Preview" width="290px">
+    </a>
+    <a href="#--------">
+        <img src=".github/assets/ter_02.png" alt="Terminal Preview" width="290px" style="padding: 20 10px">
+    </a>
+</div>
+
+<div align="center">
+    <a href="#--------">
+        <img src=".github/assets/ter_03.png" alt="Terminal Preview" width="310px" style="padding: 0 0px ">
+    </a>
+</div>
+
 >**Note**: This project is still in development.
 
 <p align="center">
@@ -25,20 +40,7 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 
 <h1 align="center">New Terminal with Zsh · p10k</h1>
 
-<div align="center">
-    <a href="#--------">
-        <img src=".github/assets/ter_01.png" alt="Terminal Preview" width="290px">
-    </a>
-    <a href="#--------">
-        <img src=".github/assets/ter_02.png" alt="Terminal Preview" width="290px" style="padding: 20 10px">
-    </a>
-</div>
 
-<div align="center">
-    <a href="#--------">
-        <img src=".github/assets/ter_03.png" alt="Terminal Preview" width="310px" style="padding: 0 0px ">
-    </a>
-</div>
 
 ## Installation
 
