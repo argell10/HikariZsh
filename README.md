@@ -1,4 +1,4 @@
-<h1 align="center"> Hikari ken </h1>
+<h1 align="center"> Hikari </h1>
 
 >**Note**: This project is still in development.
 
