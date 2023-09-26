@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Define tools, requeriments and plugins to install
-tools_requirements=(git sed make wget curl unzip)
-tools_to_install=(vim tmux htop nmap zsh);
-
 # Check the available package manager (apt or yum)
 if type "apt" &>/dev/null; then
     package_manager="apt"

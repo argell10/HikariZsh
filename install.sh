@@ -1,37 +1,66 @@
 #!/bin/bash
 
-# Define colors
-NONE='\033[00m'
-RED='\033[01;31m'
-GREEN='\033[01;32m'
-YELLOW='\033[01;33m'
-PURPLE='\033[01;35m'
-CYAN='\033[01;36m'
-WHITE='\033[01;37m'
-BOLD='\033[1m'
-UNDERLINE='\033[4m'
-
 readonly REPO_DIR="$(dirname "$(readlink -m "${0}")")"
 readonly RELEASE_DIR="${REPO_DIR}/release"
+source "${REPO_DIR}/shell/vars.sh"
 source "${REPO_DIR}/shell/config_tools.sh"
 source "${REPO_DIR}/shell/config_fonts.sh"
 
-# !------------ Define flow to configuration --------------!
-# Install the tools required
-echo -e "\n${GREEN}${BOLD}Installing required tools:${NONE}"
-install_tools "${tools_requirements[@]}"
+# Animation initialization
+matrix() {
+    sudo apt-get install cmatrix
+    clear
+    cmatrix & # Inicia cmatrix en segundo plano
+    sleep 2.5
+    pkill cmatrix # Termina el proceso de cmatrix
+}
+matrix
 
-# Install the tools
-echo -e "\n${GREEN}${BOLD}Installing tools:${NONE}"
-install_tools "${tools_to_install[@]}"
+# Menú para que el usuario elija entre las opciones 1 o 2
+echo -e "\n${GREEN}${BOLD}Selecciona una opción:${NONE}"
+echo -e "${WHITE}[1]${NONE} Install basic tools of a linux environment"
+echo -e "${WHITE}[2]${NONE} Install zsh environment to terminal with · p10k · Nerd Fonts · lsd · oh my tmux "
+read -n 1 option
 
-echo -e "\n${GREEN}${BOLD}Installing Hack Nerd Font:${NONE}"
-install_hack_nerd_font
+# Verificar la opción seleccionada
+case $option in
+    1)
+        # Install the tools required
+        echo -e "\n${GREEN}${BOLD}Installing required tools:${NONE}"
+        install_tools "${TOOLS_REQUIREMENTS[@]}"
+        # Install the tools
+        echo -e "\n${GREEN}${BOLD}Installing tools:${NONE}"
+        install_tools "${TOOLS_TO_INSTALL[@]}"
 
-# !------------ final status review of installed tools  --------------!
-# Validate the installation of the tools requeriments
-echo -e "\n${GREEN}${BOLD}FINAL REVIEW${NONE}"
-all_tools=("${tools_requirements[@]}" "${tools_to_install[@]}") # Unir las dos listas
-for tool in "${all_tools[@]}"; do
-    validate_installation "$tool"
-done
+        # check the status of the final installation of the tools
+        echo -e "\n${GREEN}${BOLD}FINAL REVIEW${NONE}"
+        all_tools=("${TOOLS_REQUIREMENTS[@]}" "${TOOLS_TO_INSTALL[@]}")
+        for tool in "${all_tools[@]}"; do
+            validate_installation "$tool"
+        done
+        ;;
+
+    2)
+        # Install the tools required
+        echo -e "\n${GREEN}${BOLD}Installing required tools:${NONE}"
+        install_tools "${TOOLS_REQUIREMENTS_P10K[@]}"
+        # Instalar Hack Nerd Font y configurar la fuente en la terminal
+        echo -e "\n${GREEN}${BOLD}Installing Hack Nerd Font:${NONE}"
+        install_hack_nerd_font
+
+        echo -e "\n${GREEN}${BOLD}Set ${PURPLE}hack nerd font ${NONE}${GREEN}${BOLD}as default font in terminal.${NONE}"
+        set_hack_nerd_font
+
+        # Validate the installation of the tools requeriments
+        echo -e "\n${GREEN}${BOLD}FINAL REVIEW${NONE}"
+        tools=("${TOOLS_REQUIREMENTS[@]}")
+        for tool in "${tools[@]}"; do
+            validate_installation "$tool"
+        done
+        ;;
+
+    *)
+        # Opción no válida
+        echo -e "\n${GREEN}${BOLD}Opción no válida. No se realizó ninguna acción.${NONE}"
+        ;;
+esac
