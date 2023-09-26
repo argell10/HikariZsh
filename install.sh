@@ -6,9 +6,14 @@ source "${REPO_DIR}/shell/vars.sh"
 source "${REPO_DIR}/shell/config_tools.sh"
 source "${REPO_DIR}/shell/config_fonts.sh"
 
+#update system
+echo -e "\n${GREEN}${BOLD}Update and upgrade your system :${NONE}"
+update_system
+
 # Animation initialization
 matrix() {
-    sudo apt-get install cmatrix
+    install_tools cmatrix
+    sudo $package_manager install cmatrix
     clear
     cmatrix & # Inicia cmatrix en segundo plano
     sleep 2.5
@@ -32,11 +37,19 @@ case $option in
         echo -e "\n${GREEN}${BOLD}Installing tools:${NONE}"
         install_tools "${TOOLS_TO_INSTALL[@]}"
 
+        # Install docker and plugins
+        echo -e "\n${GREEN}${BOLD}Installing docker and plugins...${NONE}"
+        install_docker
+
+        # Install docker and plugins
+        echo -e "\n${GREEN}${BOLD}Installing docker-compose:${NONE}"
+        install_docker_compose
+
         # check the status of the final installation of the tools
         echo -e "\n${GREEN}${BOLD}FINAL REVIEW${NONE}"
-        all_tools=("${TOOLS_REQUIREMENTS[@]}" "${TOOLS_TO_INSTALL[@]}")
+        all_tools=("${TOOLS_REQUIREMENTS[@]}" "${TOOLS_TO_INSTALL[@]}" "${TOOLS_TO_DOCKER[@]}" docker-compose docker)
         for tool in "${all_tools[@]}"; do
-            validate_installation "$tool"
+            validate_installation_tools "$tool"
         done
         ;;
 
@@ -55,7 +68,7 @@ case $option in
         echo -e "\n${GREEN}${BOLD}FINAL REVIEW${NONE}"
         tools=("${TOOLS_REQUIREMENTS[@]}")
         for tool in "${tools[@]}"; do
-            validate_installation "$tool"
+            validate_installation_tools "$tool"
         done
         ;;
 

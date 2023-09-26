@@ -22,6 +22,8 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k/tree/master)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [Oh my tmux](https://github.com/gpakosz/.tmux)
+- [Docker]()
+- [Docker compose]()
 
 <h1 align="center">New Terminal with Zsh · p10k · Nerd Fonts · lsd · oh my tmux </h1>
 
@@ -44,9 +46,14 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 
 ### Basic Tools:
 
+- git
 - vim
 - htop
 - nmap
+- docker
+- docker-compose
+
+> **Nota:** If you already have some of these tools, they will not be installed.
 
 ## Installation
 

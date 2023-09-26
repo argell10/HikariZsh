@@ -10,7 +10,13 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 
 # Define vars to configure
+# Font
 FONT_NAME='Hack Nerd Font'
+# Docker compose
+COMPOSE_VERSION='2.20.3'
+COMPOSE_URL='https://github.com/docker/compose/releases/download/v$COMPOSE_VERSION/docker-compose-linux-x86_64'
+COMPOSE_PATH='/usr/local/bin/docker-compose'
+
 
 # Define tools, requeriments and plugins to install
 TOOLS_REQUIREMENTS=(git sed make wget curl unzip)
