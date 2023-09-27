@@ -1,12 +1,18 @@
 #!/bin/bash
 
 readonly REPO_DIR="$(dirname "$(readlink -m "${0}")")"
-readonly RELEASE_DIR="${REPO_DIR}/release"
+readonly TEMP_DIR="${REPO_DIR}/templates"
 source "${REPO_DIR}/shell/vars.sh"
 source "${REPO_DIR}/shell/config_tools.sh"
 source "${REPO_DIR}/shell/config_fonts.sh"
 source "${REPO_DIR}/shell/config_zsh.sh"
 
+# init validate
+if [ "$(whoami)" = "root" ]; then
+    echo -e "This installation should not be run as super ${RED}root${NONE} user."
+    exit 1
+fi
+echo "${TEMP_DIR}"
 #update system
 echo -e "\n${GREEN}Update and upgrade your system :${NONE}"
 update_system
