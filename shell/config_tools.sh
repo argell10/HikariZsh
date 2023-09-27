@@ -112,8 +112,10 @@ install_docker() {
     sudo "$package_manager" install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y >/dev/null 2>&1  # Instala silenciosamente
     
     # add user to docker
-    sudo usermod -aG docker $USER
-
+    if [ "$(whoami)" != "root" ]; then
+        sudo usermod -aG docker $USER
+    fi
+    
     validate_installation_tools "docker"
 }
 

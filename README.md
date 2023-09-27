@@ -22,8 +22,8 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k/tree/master)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [Oh my tmux](https://github.com/gpakosz/.tmux)
-- [Docker]()
-- [Docker compose]()
+- [Docker](https://docs.docker.com/engine/install/ubuntu/)
+- [Docker compose](https://docs.docker.com/compose/install/standalone/)
 
 <h1 align="center">New Terminal with Zsh · p10k · Nerd Fonts · lsd · oh my tmux </h1>
 
@@ -57,12 +57,7 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 
 ## Installation
 
-1. User as root (sudo)
-```bash
-$ sudo su
-```
-
-2. Run the next command to install
+1. Run the next command to install
 ```bash
 $ git clone https://github.com/argell10/hikari-ken.git --depth=1 && cd hikari-ken && ./install.sh
 ```
