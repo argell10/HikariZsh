@@ -1,8 +1,16 @@
-#!/bin/bash
-
 ############################################
 #        Install tools                    #
 ##########################################
+
+# Animation initialization
+matrix() {
+    install_tools cmatrix
+    sudo $package_manager install cmatrix
+    clear
+    cmatrix & # Inicia cmatrix en segundo plano
+    sleep 2.5
+    pkill cmatrix # Termina el proceso de cmatrix
+}
 
 # Check the available package manager (apt or yum)
 if type "apt" &>/dev/null; then
@@ -13,15 +21,6 @@ else
     echo "❌ No compatible package manager (apt or yum) found."
     exit 1
 fi
-
-# Update system 
-update_system() {
-    if [ "$package_manager" = "apt" ]; then
-        sudo apt-get update && sudo apt-get upgrade -y >/dev/null 2>&1  # Redirigir salida
-    elif [ "$package_manager" = "yum" ]; then
-        sudo yum update && sudo yum upgrade -y >/dev/null 2>&1  # Redirigir salida
-    fi
-}
 
 # Function to install a list of tools
 install_tools() {
@@ -56,19 +55,6 @@ validate_installation_tools() {
         return 1  # Error
     fi
 }
-
-# Validate instalation which
-# validate_instalation_which() {
-#     local tool="$1"
-#     if which "$tool" &>/dev/null; then
-#         echo "✅ $tool installed successfully."
-#         return 0  # Success
-#     else
-#         echo  "❌ Error: Failed to install $tool."
-#         return 1  # Error
-#     fi
-# }
-
 
 ####################################################
 #     Config to install dokcer and dokcer-compose #                 

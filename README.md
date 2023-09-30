@@ -55,9 +55,35 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 
 > **Nota:** If you already have some of these tools, they will not be installed.
 
+## Get started
+
+Choose an option 1 or 2
+
+<div align="center">
+    <a href="#--------">
+        <img src=".github/assets/options.png" alt="Terminal Preview" style="padding: 0 0px ">
+    </a>
+</div>
+
+- **[ 1 ]:** installs a list of basic tools for our Linux system previously specified in [Basic Tools](https://github.com/argell10/hikari#basic-tools)
+
+- **[ 2 ]:** install a zsh environment configured with useful zsh themes and plugins
+In addition, the theme uses powerlevel10k, which gives a very aesthetic touch to our terminal and improves the user experience.
+
+Regardless of the option you choose, a validation and finally the installation will be carried out in case the tools to be installed are not installed or configured
+
+<div align="center">
+    <a href="#--------">
+        <img src=".github/assets/end_install.pnf" alt="Terminal Preview" style="padding: 0 0px ">
+    </a>
+</div>
+
 ## Installation
+
+> **Note:** This project should not be run as super user, it will ask for sudo permissions
 
 1. Run the next command to install
 ```bash
 $ git clone https://github.com/argell10/hikari-ken.git --depth=1 && cd hikari-ken && ./install.sh
 ```
+2. 
