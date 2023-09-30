@@ -42,6 +42,15 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
     </a>
 </div>
 
+## Zsh environment:
+
+- **zsh** as default shell 
+- **lsd** as ls command
+- **powelevel10k** as theme of shell of the terminal
+- **Hack Nerd Font** as font to terminal to visual icons
+- **plugins** to experience of user with zsh terminal 
+- **Oh my temux** [ In development ]
+
 <h1 align="center"> Install basic tools of a linux environment </h1>
 
 ### Basic Tools:
@@ -73,8 +82,8 @@ In addition, the theme uses powerlevel10k, which gives a very aesthetic touch to
 Regardless of the option you choose, a validation and finally the installation will be carried out in case the tools to be installed are not installed or configured
 
 <div align="center">
-    <a href="#--------">
-        <img src=".github/assets/end_install.pnf" alt="Terminal Preview" style="padding: 0 0px ">
+    <a href="end_install">
+        <img src=".github/assets/end_install.png" alt="Terminal Preview" style="padding: 0 0px ">
     </a>
 </div>
 
@@ -86,4 +95,3 @@ Regardless of the option you choose, a validation and finally the installation w
 ```bash
 $ git clone https://github.com/argell10/hikari-ken.git --depth=1 && cd hikari-ken && ./install.sh
 ```
-2. 
