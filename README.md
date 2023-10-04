@@ -1,7 +1,5 @@
 <h1 align="center"> Hikari </h1>
 
->**Note**: This project is still in development.
-
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=linux,bash,git,github,vim" />
