@@ -13,9 +13,6 @@ if [ "$(whoami)" = "root" ]; then
     exit 1
 fi
 
-# Animation initialization
-matrix
-
 ###########################################################
 #       DEFINE FUCTIONS TO FLOW OF EXECUTION              #
 ###########################################################
