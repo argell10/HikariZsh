@@ -2,16 +2,6 @@
 #        Install tools                    #
 ##########################################
 
-# Animation initialization
-matrix() {
-    install_tools cmatrix
-    sudo $package_manager install cmatrix
-    clear
-    cmatrix & # Inicia cmatrix en segundo plano
-    sleep 2.5
-    pkill cmatrix # Termina el proceso de cmatrix
-}
-
 # Check the available package manager (apt or yum)
 if type "apt" &>/dev/null; then
     package_manager="apt"
