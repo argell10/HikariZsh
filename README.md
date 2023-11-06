@@ -47,7 +47,6 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - **powelevel10k** as theme of shell of the terminal
 - **Hack Nerd Font** as font to terminal to visual icons
 - **plugins** to experience of user with zsh terminal 
-- **Oh my temux** [ In development ]
 
 <h1 align="center"> Install basic tools of a linux environment </h1>
 
