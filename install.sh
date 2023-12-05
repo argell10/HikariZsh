@@ -26,6 +26,14 @@ install_basic_tools() {
     echo -e "\n${GREEN}Installing tools...${NONE}"
     install_tools "${TOOLS_TO_INSTALL[@]}"
 
+    # Install docker
+    echo -e "\n${GREEN}Installing docker and plugins...${NONE}"
+    install_docker
+
+    # Install docker compose
+    echo -e "\n${GREEN}Installing docker-compose...${NONE}"
+    install_docker_compose
+
     # check the status of the final installation of the tools
     echo -e "\n${GREEN}FINAL REVIEW${NONE}"
     all_tools=("${TOOLS_REQUIREMENTS[@]}" "${TOOLS_TO_INSTALL[@]}" "${TOOLS_TO_DOCKER[@]}" docker-compose docker)
