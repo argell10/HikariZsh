@@ -26,14 +26,6 @@ install_basic_tools() {
     echo -e "\n${GREEN}Installing tools...${NONE}"
     install_tools "${TOOLS_TO_INSTALL[@]}"
 
-    # Install docker and plugins
-    echo -e "\n${GREEN}Installing docker and plugins...${NONE}"
-    install_docker
-
-    # Install docker and plugins
-    echo -e "\n${GREEN}Installing docker-compose...${NONE}"
-    install_docker_compose
-
     # check the status of the final installation of the tools
     echo -e "\n${GREEN}FINAL REVIEW${NONE}"
     all_tools=("${TOOLS_REQUIREMENTS[@]}" "${TOOLS_TO_INSTALL[@]}" "${TOOLS_TO_DOCKER[@]}" docker-compose docker)
@@ -78,9 +70,9 @@ install_zsh_environment() {
 }
 
 # Menú para que el usuario elija entre las opciones 1 o 2
-echo -e "\n${GREEN}Selecciona una opción:${NONE}"
+echo -e "\n${GREEN}Select a option:${NONE}"
 echo -e "${WHITE}[1]${NONE} Install basic tools of a linux environment"
-echo -e "${WHITE}[2]${NONE} Install zsh environment to terminal with · p10k · Nerd Fonts · lsd · oh my tmux "
+echo -e "${WHITE}[2]${NONE} Install zsh environment to terminal with · p10k · Nerd Fonts · lsd "
 read -n 1 option
 
 # Verificar la opción seleccionada
