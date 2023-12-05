@@ -19,11 +19,9 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - [Nerd Fonts](https://www.nerdfonts.com/)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k/tree/master)
 - [lsd](https://github.com/lsd-rs/lsd)
-- [Oh my tmux](https://github.com/gpakosz/.tmux)
-- [Docker](https://docs.docker.com/engine/install/ubuntu/)
-- [Docker compose](https://docs.docker.com/compose/install/standalone/)
 
-<h1 align="center">New Terminal with Zsh · p10k · Nerd Fonts · lsd · oh my tmux </h1>
+
+<h1 align="center">New Terminal with Zsh · p10k · Nerd Fonts · lsd</h1>
 
 <div align="center">
     <a href="#--------">
@@ -56,8 +54,6 @@ Automatically installs important tools such as Git, sed, make, wget, curl and un
 - vim
 - htop
 - nmap
-- docker
-- docker-compose
 
 > **Nota:** If you already have some of these tools, they will not be installed.
 
