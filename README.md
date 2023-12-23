@@ -86,5 +86,5 @@ Regardless of the option you choose, a validation and finally the installation w
 
 1. Run the next command to install
 ```bash
-$ git clone https://github.com/argell10/HikariZsh.git --depth=1 && cd HikariZsh && ./install.sh
+git clone https://github.com/argell10/HikariZsh.git --depth=1 && cd HikariZsh && ./install.sh
 ```
